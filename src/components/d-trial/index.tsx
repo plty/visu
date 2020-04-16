@@ -24,10 +24,10 @@ const DTrial: FunctionalComponent<Props> = ({ data }: Props) => {
             .attr("x", (v, i) => i * 60)
             .attr("y", 20)
             .style("font-size", 24)
-            .text((v: number) => v);
+            .text(v => v);
 
         // Update existing D3 elements
-        controller.attr("x", (d, i) => i * 40).text((d: number) => d);
+        controller.attr("x", (d, i) => i * 40).text(d => d);
 
         // Remove old D3 elements
         controller.exit().remove();
