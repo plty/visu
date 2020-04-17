@@ -1,13 +1,13 @@
 import { FunctionalComponent, h } from "preact";
 import * as style from "./style.css";
-import DGraph from "../../components/d-graph";
-import DTrial from "../../components/d-trial";
+import DTrial, { Graph } from "../../components/d-trial";
+import data from "./graph.json";
 
 const Home: FunctionalComponent = () => {
     return (
         <div class={style.home}>
             <h1>Home</h1>
-            <DTrial data={[132, 284, 293, 832, 253, 348, 328, 935, 271, 233]} />
+            <DTrial data={data as Graph} />
             <p>This is the Home component.</p>
         </div>
     );
